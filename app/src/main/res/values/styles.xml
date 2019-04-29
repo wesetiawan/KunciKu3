@@ -6,8 +6,8 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
-        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
         <item name="android:statusBarColor">@color/white_semi_gray</item>
+        <item name="android:background">@drawable/main_bg</item>
     </style>
     <style name="login_form_text" >
         <item name="android:textColor">@color/black</item>

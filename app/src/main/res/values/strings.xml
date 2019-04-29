@@ -1,3 +1,14 @@
 <resources>
     <string name="app_name">KunciKu</string>
+    <string name="verificationText">Masukan code verifikasi yang telak kami kirim melalu SMS ke nomor yang kamu daftarkan </string>
+    <string name="main_tv1">Mau pergi dengan aman tanpa khawatir lupa mengunci pintu, atau bahkan takut kehilangan kunci-mu? KUNCIKUin aja!</string>
+    <string name="main_tv2">Selamat datang di aplikasi KUNCIKU!</string>
+    <string name="main_tv3">Aplikasi ini di ciptakan untuk mu yang suka datang dan pergi semaumu . Dari situ lah aku terinspirasi supaya kunci kamarku tidak sepertimu :(</string>
+    <string name="daftar">DAFTAR</string>
+    <string name="masuk">MASUK</string>
+    <string name="continue_with_facebook">Continue With Facebook</string>
+    <string name="top_nav_title">Title</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
