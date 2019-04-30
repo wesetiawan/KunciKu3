@@ -7,7 +7,7 @@
     <string name="daftar">DAFTAR</string>
     <string name="masuk">MASUK</string>
     <string name="continue_with_facebook">Continue With Facebook</string>
-    <string name="top_nav_title">Title</string>
+    <string name="top_nav_title">"Login"</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>

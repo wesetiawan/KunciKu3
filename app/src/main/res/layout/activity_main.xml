@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
+    android:id="@+id/main"
     tools:context=".MainActivity"
     android:background="@drawable/main_bg">
 
@@ -16,19 +16,16 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <com.google.android.material.appbar.AppBarLayout
+        <include
+            android:layout_marginLeft="-16dp"
             android:id="@+id/top"
+            layout="@layout/top_nav"
             android:layout_width="match_parent"
-            android:layout_height="@dimen/_40ssp"
-            android:layout_alignParentTop="true">
-            <androidx.appcompat.widget.Toolbar
-                android:id="@+id/navigation"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:elevation="4dp">
+            android:layout_height="?attr/actionBarSize"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true">
 
-            </androidx.appcompat.widget.Toolbar>
-        </com.google.android.material.appbar.AppBarLayout>
+        </include>
 
         <FrameLayout
             android:id="@+id/container"
@@ -43,7 +40,7 @@
             android:layout_height="@dimen/_40ssp"
             android:layout_alignParentBottom="true"
             android:id="@+id/bottom">
-            <com.google.android.material.button.MaterialButton
+            <Button
                 android:id="@+id/button"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -60,5 +57,4 @@
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </RelativeLayout>
-
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
