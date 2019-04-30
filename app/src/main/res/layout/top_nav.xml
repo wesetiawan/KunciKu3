@@ -1,44 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.appcompat.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/toolbar"
-    android:background="@drawable/main_bg"
-    android:layout_width="match_parent"
-    android:layout_height="?attr/actionBarSize"
-    style="@style/ThemeOverlay.AppCompat.Dark">
-
+<LinearLayout xmlns:android = "http://schemas.android.com/apk/res/android"
+    xmlns:app = "http://schemas.android.com/apk/res-auto"
+    android:layout_width = "match_parent"
+    android:layout_height = "wrap_content"
+    android:gravity = "center_vertical"
+    android:padding = "10dp"
+    android:weightSum = "1"
+    android:background="">
     <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:id="@+id/left"
-        android:layout_gravity="start|left"
-        android:gravity="center_vertical">
-        <ImageButton
+        android:layout_width = "0dp"
+        android:layout_height = "match_parent"
+        android:layout_weight = "0.6">
+        <ImageView
             android:id="@+id/back"
-            android:layout_width="@dimen/_25sdp"
-            android:layout_height="wrap_content"
-            android:src="@drawable/ic_arrow_back_black_24dp"
-            android:layout_marginRight="@dimen/_5sdp"/>
+            android:layout_width = "wrap_content"
+            android:layout_height = "match_parent"
+            android:src = "@drawable/ic_arrow_back_black_24dp" />
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/top_nav_title"
-            android:fontFamily="@font/baloo"
-            android:textColor="@color/black"
-            android:textSize="@dimen/_20ssp"/>
+            android:id = "@+id/title"
+            android:layout_width = "match_parent"
+            android:layout_height = "wrap_content"
+            android:layout_marginLeft = "10dp"
+            android:text = "@string/top_nav_title"
+            android:textSize = "20sp"
+            android:textColor = "#000"
+            android:textStyle = "bold" />
     </LinearLayout>
-    <RelativeLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:id="@+id/right"
-        android:layout_gravity="end|right"
-        android:gravity="center_vertical">
+    <LinearLayout
+        android:layout_width = "0dp"
+        android:layout_height = "match_parent"
+        android:layout_marginRight = "10dp"
+        android:layout_weight = "0.4"
+        android:gravity = "end">
         <ImageView
             android:id="@+id/help"
-            android:layout_width="@dimen/_25sdp"
-            android:layout_height="wrap_content"
-            android:src="@drawable/ic_help_outline_black_24dp" />
-    </RelativeLayout>
-</androidx.appcompat.widget.Toolbar>
+            android:layout_width = "wrap_content"
+            android:layout_height = "match_parent"
+            android:layout_marginLeft = "20dp"
+            android:src = "@drawable/ic_help_outline_black_24dp" />
+    </LinearLayout>
+</LinearLayout>
