@@ -1,21 +1,16 @@
 package dev.ws.kunciku;
 
+import android.os.Bundle;
+import android.widget.Toolbar;
+
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
-import androidx.core.view.LayoutInflaterCompat;
+import androidx.fragment.app.Fragment;
 
-import android.content.Context;
-import android.os.Bundle;
-import android.text.Layout;
-import android.view.View;
-import android.widget.ImageButton;
-import android.widget.LinearLayout;
 
-import com.mikepenz.iconics.context.IconicsContextWrapper;
-import com.mikepenz.iconics.context.IconicsLayoutInflater;
 
 public class MainActivity extends AppCompatActivity {
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,17 +19,22 @@ public class MainActivity extends AppCompatActivity {
 
 
 
+
+
+
     }
 
 
     private void prepareTopNavBar(){
-        Toolbar top = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(top);
-        top.setTitle(getResources().getString(R.string.top_nav_title));
+        assert getSupportActionBar() != null;
+        ActionBar actionBar = getSupportActionBar();
+        actionBar.setDisplayHomeAsUpEnabled(true);
+        actionBar.setDisplayShowHomeEnabled(true);
     }
 
     @Override
-    protected void attachBaseContext(Context newBase) {
-        super.attachBaseContext(IconicsContextWrapper.wrap(newBase));
+    public boolean onSupportNavigateUp() {
+        finish();
+        return true;
     }
 }

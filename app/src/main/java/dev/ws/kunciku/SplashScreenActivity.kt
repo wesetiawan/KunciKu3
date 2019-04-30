@@ -27,5 +27,6 @@ class SplashScreenActivity : AppCompatActivity() {
     }
     private fun moveToWelcome(){
         startActivity(Intent(this,WelcomeActivity::class.java))
+        finish()
     }
 }

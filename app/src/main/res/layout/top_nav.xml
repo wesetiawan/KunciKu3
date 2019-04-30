@@ -14,14 +14,13 @@
         android:id="@+id/left"
         android:layout_gravity="start|left"
         android:gravity="center_vertical">
-        <com.mikepenz.iconics.view.IconicsImageButton
+        <ImageButton
             android:id="@+id/back"
             android:layout_width="@dimen/_25sdp"
             android:layout_height="wrap_content"
-            app:iiv_icon="cmd_arrow_left_thick"
+            android:src="@drawable/ic_arrow_back_black_24dp"
             android:layout_marginRight="@dimen/_5sdp"/>
         <TextView
-            style="@style/top_nav_item"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/top_nav_title"
@@ -29,7 +28,7 @@
             android:textColor="@color/black"
             android:textSize="@dimen/_20ssp"/>
     </LinearLayout>
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
@@ -41,5 +40,5 @@
             android:layout_width="@dimen/_25sdp"
             android:layout_height="wrap_content"
             android:src="@drawable/ic_help_outline_black_24dp" />
-    </LinearLayout>
+    </RelativeLayout>
 </androidx.appcompat.widget.Toolbar>
