@@ -5,8 +5,7 @@
     android:layout_height = "wrap_content"
     android:gravity = "center_vertical"
     android:padding = "10dp"
-    android:weightSum = "1"
-    android:background="">
+    android:weightSum = "1">
     <LinearLayout
         android:layout_width = "0dp"
         android:layout_height = "match_parent"
@@ -17,13 +16,13 @@
             android:layout_height = "match_parent"
             android:src = "@drawable/ic_arrow_back_black_24dp" />
         <TextView
-            android:id = "@+id/title"
+            android:id = "@+id/nav_title"
             android:layout_width = "match_parent"
             android:layout_height = "wrap_content"
             android:layout_marginLeft = "10dp"
-            android:text = "@string/top_nav_title"
-            android:textSize = "20sp"
-            android:textColor = "#000"
+            android:text = "Main"
+            android:textSize = "@dimen/_20ssp"
+            android:textColor = "@color/black"
             android:textStyle = "bold" />
     </LinearLayout>
     <LinearLayout

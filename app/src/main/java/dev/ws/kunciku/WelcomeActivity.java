@@ -16,7 +16,6 @@ public class WelcomeActivity extends AppCompatActivity implements View.OnClickLi
         setUpButton();
     }
 
-
     private void setUpButton(){
         Button login = findViewById(R.id.main_loginBtn);
         login.setOnClickListener(this);
@@ -30,23 +29,23 @@ public class WelcomeActivity extends AppCompatActivity implements View.OnClickLi
     public void onClick(View v) {
         switch (v.getId()){
             case R.id.main_loginBtn:
-                moveToMain();
+                String login = "login";
+                moveToMain(login);
                 break;
-
             case R.id.main_regBtn:
-                moveToMain();
+                String daftar = "daftar";
+                moveToMain(daftar);
                 break;
-
             case R.id.fb_button:
                 break;
-
                 default:
                     break;
         }
     }
 
-    private void moveToMain(){
+    private void moveToMain(String f){
         Intent i = new Intent(this,MainActivity.class);
+        i.putExtra("selectedFragment",f);
         startActivity(i);
     }
 }

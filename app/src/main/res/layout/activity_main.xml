@@ -6,7 +6,8 @@
     android:layout_height="match_parent"
     android:id="@+id/main"
     tools:context=".MainActivity"
-    android:background="@drawable/main_bg">
+    android:background="@drawable/main_bg"
+    android:focusableInTouchMode="true">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -15,44 +16,30 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toTopOf="parent">
-
+        <ScrollView
+            android:id="@+id/main_scroll"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true">
+            <FrameLayout
+                android:id="@+id/container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+            </FrameLayout>
+        </ScrollView>
         <include
             android:id="@+id/top"
             layout="@layout/top_nav"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentStart="true">
-
+            android:layout_alignParentTop="true">
         </include>
-        <FrameLayout
-            android:id="@+id/container"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerInParent="true">
-
-
-        </FrameLayout>
-        <androidx.constraintlayout.widget.ConstraintLayout
+        <include
+            android:id="@+id/bottom"
+            layout="@layout/main_bottom_button"
             android:layout_width="match_parent"
-            android:layout_height="@dimen/_40ssp"
-            android:layout_alignParentBottom="true"
-            android:id="@+id/bottom">
-            <Button
-                android:id="@+id/button"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:fontFamily="@font/baloo"
-                android:text="@string/daftar"
-                android:textSize="@dimen/_15ssp"
-                android:textColor="@color/white"
-                android:background="@color/green_pale"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintTop_toTopOf="parent"/>
-
-        </androidx.constraintlayout.widget.ConstraintLayout>
-
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true">
+        </include>
     </RelativeLayout>
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
