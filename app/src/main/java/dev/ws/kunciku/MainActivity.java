@@ -1,26 +1,24 @@
 package dev.ws.kunciku;
 
-import android.content.Context;
-import android.media.Image;
 import android.os.Bundle;
+import android.text.Layout;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.Fragment;
-import androidx.viewpager.widget.ViewPager;
-
-import butterknife.BindView;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
-
+    private static final String TAG = "MainActivity";
     private static MainActivity mainActivity;
 
-    private FrameLayout frameLayout;
+
+    private TextView title;
+    private Button action;
+    private ImageView back,help;
 
     public static MainActivity getInstance() {
         return mainActivity;
@@ -30,44 +28,43 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        prepareTopNav();
+        Log.d(TAG,"THIS MAIN ACTIVITY");
+        prepareComponent();
         mainActivity = this;
-        prepareFragment();
+        prepareTopNavButton();
+        prepareSelectedFragment();
     }
 
-    private void prepareTopNav() {
-        ImageView back = findViewById(R.id.back);
+    private void prepareComponent(){
+        title = findViewById(R.id.nav_title);
+        action = findViewById(R.id.button);
+        back = findViewById(R.id.back);
+        help = findViewById(R.id.help);
+    }
+
+    private void prepareTopNavButton() {
         back.setOnClickListener(this);
-        TextView title = findViewById(R.id.nav_title);
-        ImageView help = findViewById(R.id.help);
         help.setOnClickListener(this);
-        Button action = findViewById(R.id.button);
     }
-
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.back:
-                moveBack();
+                backButton();
                 break;
             case R.id.help:
-                moveBack();
+                backButton();
                 break;
             default:
                 break;
         }
     }
 
-    private void moveBack() {
+    private void backButton() {
         onBackPressed();
         finish();
     }
-
-
-    private void prepareFragment() {
-
-        TextView title = findViewById(R.id.nav_title);
-        Button action = findViewById(R.id.button);
+    private void prepareSelectedFragment() {
         final String var = getIntent().getStringExtra("selectedFragment");
         if (var.equals("login")) {
             getSupportFragmentManager().beginTransaction().replace(R.id.container, LoginFragment.newInstance()).commit();

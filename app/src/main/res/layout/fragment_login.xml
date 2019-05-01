@@ -4,10 +4,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".LoginFragment"
     android:layout_marginTop="?attr/actionBarSize"
     android:padding="@dimen/_10sdp"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    tools:context=".LoginFragment">
 
         <TextView
             android:drawableTop="@drawable/phone"
@@ -35,7 +35,7 @@
             app:ccpDialog_showFastScroller="false"
             app:ccpDialog_showNameCode="false"
             app:ccp_autoDetectCountry="true"
-            app:ccp_countryPreference="ID,SG,IN,MY,SA,CN"
+            app:ccp_countryPreference="ID,SG"
             app:ccp_defaultLanguage="INDONESIA"
             app:ccp_rememberLastSelection="true"
             app:ccp_showArrow="false"
