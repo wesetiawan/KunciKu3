@@ -83,7 +83,8 @@
                     android:background="@drawable/green_btn"
                     android:text="@string/masuk"
                     android:textColor="#fff"
-                    android:typeface="monospace" />
+                    android:typeface="monospace"
+                    tools:ignore="ButtonStyle" />
 
                 <Button
                     android:id="@+id/main_regBtn"

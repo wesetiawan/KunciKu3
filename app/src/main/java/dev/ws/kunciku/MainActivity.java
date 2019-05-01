@@ -1,7 +1,6 @@
 package dev.ws.kunciku;
 
 import android.os.Bundle;
-import android.text.Layout;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -13,16 +12,11 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
     private static final String TAG = "MainActivity";
-    private static MainActivity mainActivity;
 
 
     private TextView title;
     private Button action;
     private ImageView back,help;
-
-    public static MainActivity getInstance() {
-        return mainActivity;
-    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,7 +24,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         setContentView(R.layout.activity_main);
         Log.d(TAG,"THIS MAIN ACTIVITY");
         prepareComponent();
-        mainActivity = this;
         prepareTopNavButton();
         prepareSelectedFragment();
     }
@@ -68,12 +61,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         final String var = getIntent().getStringExtra("selectedFragment");
         if (var.equals("login")) {
             getSupportFragmentManager().beginTransaction().replace(R.id.container, LoginFragment.newInstance()).commit();
-            title.setText("Masuk");
-            action.setText("Masuk");
+            title.setText(getResources().getString(R.string.masuk));
+            action.setText(getResources().getString(R.string.masuk));
         }else if (var.equals("daftar")){
             getSupportFragmentManager().beginTransaction().replace(R.id.container, RegisterFragment.newInstance()).commit();
-            title.setText("Daftar");
-            action.setText("Daftar");
+            title.setText(getResources().getString(R.string.daftar));
+            action.setText(getResources().getString(R.string.daftar));
         }
     }
 

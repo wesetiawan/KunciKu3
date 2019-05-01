@@ -1,6 +1,5 @@
 package dev.ws.kunciku;
 
-import android.content.Context;
 import android.net.Uri;
 import android.os.Bundle;
 
@@ -11,22 +10,20 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import org.jetbrains.annotations.NotNull;
 
 
 public class OtpFragment extends Fragment {
 
-    private View view;
-    static private OtpFragment otpFragment;
-
     public static OtpFragment newInstance() {
-        otpFragment = new OtpFragment();
+        OtpFragment otpFragment = new OtpFragment();
         return otpFragment;
     }
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+    public View onCreateView(@NotNull LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        view = inflater.inflate(R.layout.fragment_otp, container, false);
+        View view = inflater.inflate(R.layout.fragment_otp, container, false);
         return view;
     }
 

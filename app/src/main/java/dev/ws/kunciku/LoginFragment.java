@@ -11,25 +11,22 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import org.jetbrains.annotations.NotNull;
 
 
 public class LoginFragment extends Fragment {
     private static final String TAG = "LoginFragment";
 
 
-    static private LoginFragment loginFragment;
-
-
     public static LoginFragment newInstance() {
-        loginFragment = new LoginFragment();
+        LoginFragment loginFragment = new LoginFragment();
         return loginFragment;
     }
 
     @Override
-    public View onCreateView(LayoutInflater inflater,ViewGroup container, Bundle savedInstanceState) {
+    public View onCreateView(@NotNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         Log.d(TAG,"THIS FRAGMENT LOGIN");
-        View view = inflater.inflate(R.layout.fragment_login, container, false);
-        return view;
+        return inflater.inflate(R.layout.fragment_login, container, false);
     }
 
     @Override
