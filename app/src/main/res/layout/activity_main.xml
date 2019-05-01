@@ -35,7 +35,7 @@
             android:layout_alignParentTop="true">
         </include>
         <include
-            android:id="@+id/bottom"
+            android:id="@+id/body"
             layout="@layout/main_bottom_button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

@@ -9,26 +9,16 @@
     android:padding="@dimen/_10sdp"
     android:orientation="vertical">
 
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/phone"/>
         <TextView
+            android:drawableTop="@drawable/phone"
             android:id="@+id/textView3"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/_10sdp"
             android:fontFamily="@font/baloo"
             android:text="@string/silahkan_masuk"
-            android:textAlignment="viewStart"
             android:textColor="@color/black"
             android:textSize="@dimen/_15ssp" />
-    </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="60dp"
@@ -56,7 +46,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
-            android:hint="Nomor HP"
+            android:hint="@string/nomor_hp"
             android:inputType="phone"
             android:singleLine="true"
             android:textColor="@color/black"
