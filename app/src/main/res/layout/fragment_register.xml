@@ -4,29 +4,22 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_marginTop="?attr/actionBarSize"
     android:padding="@dimen/_10sdp"
     tools:context=".RegisterFragment">
 
     <LinearLayout
         android:id="@+id/linlay1"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
-        <RelativeLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
             <TextView
                 android:id="@+id/textView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="32dp"
                 android:fontFamily="@font/baloo"
                 android:text="@string/lengkapi_data_dirimu_di_bawah_ini_ya"
                 android:textColor="@color/black"
-                android:textSize="24sp"/>
-        </RelativeLayout>
-
+                android:textSize="@dimen/_20ssp"/>
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -34,7 +27,6 @@
             <TextView
                 android:id="@+id/textView3"
                 style="@style/login_form_text"
-                android:layout_marginTop="20dp"
                 android:text="@string/nama_lengkap" />
 
             <EditText
@@ -50,7 +42,6 @@
             <TextView
                 android:id="@+id/textView4"
                 style="@style/login_form_text"
-                android:layout_marginTop="32dp"
                 android:text="@string/email" />
 
             <EditText
@@ -66,7 +57,6 @@
             <TextView
                 android:id="@+id/textView5"
                 style="@style/login_form_text"
-                android:layout_marginTop="32dp"
                 android:text="@string/nomor_hp" />
             <LinearLayout
                 android:layout_marginTop="5dp"

@@ -1,19 +1,116 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="@dimen/_10sdp"
+    tools:context=".LoginFragment">
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-        <TextView
-            android:layout_centerInParent="true"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="Login Fragment" />
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <ImageView
+                android:id="@+id/oTP_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                app:srcCompat="@drawable/phone" />
+                <TextView
+                    android:id="@+id/textView3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:fontFamily="@font/baloo"
+                    android:text="@string/tunggu_sebentar"
+                    android:textAlignment="viewStart"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+                    android:textColor="@color/black"
+                    android:textSize="25sp" />
 
+                <TextView
+                    android:id="@+id/otpTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-condensed"
+                    android:text="@string/verificationText"
+                    android:textColor="@color/black"
+                    android:textSize="14sp" />
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal">
 
-    </RelativeLayout>
+                <com.mukesh.OtpView
+                    android:id="@+id/otpView"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    style="@style/OtpWidget.OtpView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:cursorVisible="false"
+                    android:inputType="number"
+                    app:hideLineWhenFilled="true"
+                    app:itemCount="6"
+                    app:itemHeight="30sp"
+                    app:itemSpacing="10sp"
+                    app:itemWidth="30sp"
+                    app:lineColor="@color/colorPrimary"
+                    app:lineWidth="4sp"
+                    app:state_filled="true"
+                    app:viewType="line" />
 
-</FrameLayout>
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent">
+
+                    <ProgressBar
+                        android:id="@+id/countdown_progress"
+                        style="?android:attr/progressBarStyle"
+                        android:layout_width="29dp"
+                        android:layout_height="29dp"
+                        android:indeterminateDrawable="@drawable/custom_progress_bar"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@id/relyal1"
+                        />
+
+                    <RelativeLayout
+                        android:id="@+id/relyal1"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:layout_centerInParent="true"
+                            android:id="@+id/countdown_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="00:00"
+                            android:textColor="@color/black"
+                            android:textSize="25sp" />
+                        <Button
+                            android:id="@+id/recode_btn"
+                            android:layout_width="120dp"
+                            android:layout_height="match_parent"
+                            android:layout_centerInParent="true"
+                            android:background="@drawable/green_btn"
+                            android:text="KIRIM ULANG"
+                            android:textColor="@color/white"
+                            android:visibility="visible" />
+                    </RelativeLayout>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
+
+</RelativeLayout>

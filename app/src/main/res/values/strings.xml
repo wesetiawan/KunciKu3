@@ -13,11 +13,10 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="silahkan_masuk">Silahkan masuk dengan nomor HP-mu yang terdaftar</string>
     <string name="nomor_hp">Nomor HP</string>
-    <string name="nomor_hp">Nomor HP</string>
-    <string name="nomor_hp">Nomor HP</string>
     <string name="cth_name_email_com">Cth: name@email.com</string>
     <string name="email">Email</string>
     <string name="cth_name">Cth: Name</string>
     <string name="nama_lengkap">Nama Lengkap</string>
     <string name="lengkapi_data_dirimu_di_bawah_ini_ya">Lengkapi data dirimu di bawah ini ya</string>
+    <string name="tunggu_sebentar">Tunggu Sebentar</string>
 </resources>
