@@ -1,33 +1,20 @@
 package dev.ws.kunciku;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.Button;
 
-public class WelcomeActivity extends AppCompatActivity implements View.OnClickListener {
+import androidx.appcompat.app.AppCompatActivity;
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_welcome);
-        setUpButton();
-    }
+import butterknife.ButterKnife;
+import butterknife.OnClick;
+import dev.ws.kunciku.Main.MainActivity;
 
-    private void setUpButton(){
-        Button login = findViewById(R.id.main_loginBtn);
-        login.setOnClickListener(this);
-        Button daftar = findViewById(R.id.main_regBtn);
-        daftar.setOnClickListener(this);
-        Button fb = findViewById(R.id.fb_button);
-        fb.setOnClickListener(this);
-    }
+public class WelcomeActivity extends AppCompatActivity {
 
-    @Override
-    public void onClick(View v) {
-        switch (v.getId()){
+    @OnClick({R.id.main_regBtn,R.id.main_loginBtn,R.id.fb_button})
+    void onButtonClick(Button btn){
+        switch (btn.getId()) {
             case R.id.main_loginBtn:
                 String login = "login";
                 moveToMain(login);
@@ -38,13 +25,21 @@ public class WelcomeActivity extends AppCompatActivity implements View.OnClickLi
                 break;
             case R.id.fb_button:
                 break;
-                default:
-                    break;
+            default:
+                break;
         }
     }
 
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_welcome);
+        ButterKnife.bind(this);
+    }
+
+
     private void moveToMain(String f){
-        Intent i = new Intent(this,MainActivity.class);
+        Intent i = new Intent(this, MainActivity.class);
         i.putExtra("selectedFragment",f);
         startActivity(i);
     }

@@ -6,16 +6,16 @@
     android:padding="10dp"
     android:weightSum="1"
     android:baselineAligned="false">
-    <LinearLayout
+    <!--<LinearLayout
         android:layout_width = "0dp"
         android:layout_height = "match_parent"
         android:layout_weight = "0.6">
-        <ImageView
+        <androidx.appcompat.widget.AppCompatImageView
             android:id="@+id/back"
             android:layout_width = "wrap_content"
             android:layout_height = "match_parent"
             android:src = "@drawable/ic_arrow_back_black_24dp" />
-        <TextView
+        <androidx.appcompat.widget.AppCompatTextView
             android:textAllCaps="false"
             android:id = "@+id/nav_title"
             android:layout_width = "match_parent"
@@ -32,11 +32,11 @@
         android:layout_marginRight = "10dp"
         android:layout_weight = "0.4"
         android:gravity = "end">
-        <ImageView
+        <androidx.appcompat.widget.AppCompatImageView
             android:id="@+id/help"
             android:layout_width = "wrap_content"
             android:layout_height = "match_parent"
             android:layout_marginLeft = "20dp"
             android:src = "@drawable/ic_help_outline_black_24dp" />
-    </LinearLayout>
+    </LinearLayout>-->
 </LinearLayout>

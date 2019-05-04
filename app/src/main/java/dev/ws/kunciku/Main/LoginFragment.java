@@ -1,4 +1,4 @@
-package dev.ws.kunciku;
+package dev.ws.kunciku.Main;
 
 
 import android.os.Bundle;
@@ -13,20 +13,26 @@ import android.view.ViewGroup;
 
 import org.jetbrains.annotations.NotNull;
 
+import dev.ws.kunciku.R;
+
 
 public class LoginFragment extends Fragment {
     private static final String TAG = "LoginFragment";
 
 
+    static private LoginFragment loginFragment;
+
+
     public static LoginFragment newInstance() {
-        LoginFragment loginFragment = new LoginFragment();
+        loginFragment = new LoginFragment();
         return loginFragment;
     }
 
     @Override
     public View onCreateView(@NotNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         Log.d(TAG,"THIS FRAGMENT LOGIN");
-        return inflater.inflate(R.layout.fragment_login, container, false);
+        View view = inflater.inflate(R.layout.fragment_login, container, false);
+        return view;
     }
 
     @Override

@@ -1,6 +1,5 @@
-package dev.ws.kunciku;
+package dev.ws.kunciku.Main;
 
-import android.net.Uri;
 import android.os.Bundle;
 
 import androidx.annotation.Nullable;
@@ -11,6 +10,8 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import org.jetbrains.annotations.NotNull;
+
+import dev.ws.kunciku.R;
 
 
 public class OtpFragment extends Fragment {
