@@ -2,8 +2,8 @@ package dev.ws.kunciku.Main;
 
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
 import android.widget.Button;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -43,8 +43,8 @@ public class MainActivity extends AppCompatActivity{
         prepareSelectedFragment(var);
     }
 
-    @OnClick({R.id.help,R.id.back,R.id.action})
-    void onButtonClick(ImageView img){
+    @OnClick({R.id.help,R.id.back})
+    void onButtonClick(View img){
         switch (img.getId()) {
             case R.id.back:
                 onBackPressed();
@@ -57,7 +57,6 @@ public class MainActivity extends AppCompatActivity{
         }
     }
     public void prepareSelectedFragment(@NotNull String var) {
-
 
         if (var.equals("login")) {
             selectedFragment = LoginFragment.newInstance();
@@ -73,6 +72,27 @@ public class MainActivity extends AppCompatActivity{
         action.setText(content);
     }
 
+    /*private void helpAction(){
+        ShowCaseDialog showCaseDialog = new ShowCaseBuilder()
+
+                .textColorRes(R.color.white)
+                .titleTextSizeRes(R.dimen.text_title)
+                .textSizeRes(R.dimen.text_normal)
+                .spacingRes(R.dimen.spacing_normal)
+                .backgroundContentColorRes(R.color.blue)
+                .clickable(true)
+                .build();
+        ArrayList<ShowCaseObject> showCaseList = new ArrayList<>();
+        showCaseList.add(
+                new ShowCaseObject(
+                        help,
+                        "Show case using custom target",
+                        "This is highlighted using custom target"));
+
+
+        showCaseDialog.show(this,TAG,showCaseList);
+
+    }*/
 
     /*private boolean actionSwitcher (int position){
         switch (position){
