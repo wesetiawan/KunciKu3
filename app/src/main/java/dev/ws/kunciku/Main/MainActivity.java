@@ -23,6 +23,7 @@ public class MainActivity extends AppCompatActivity{
 
 
     private String content;
+    private Fragment selectedFragment;
 
     private FragmentManager fragmentManager = getSupportFragmentManager();
     private FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
@@ -43,8 +44,8 @@ public class MainActivity extends AppCompatActivity{
     }
 
     @OnClick({R.id.help,R.id.back,R.id.action})
-    void onButtonClick(Button btn){
-        switch (btn.getId()) {
+    void onButtonClick(ImageView img){
+        switch (img.getId()) {
             case R.id.back:
                 onBackPressed();
                 break;
@@ -55,10 +56,9 @@ public class MainActivity extends AppCompatActivity{
                 break;
         }
     }
+    public void prepareSelectedFragment(@NotNull String var) {
 
-    private void prepareSelectedFragment(@NotNull String var) {
 
-        Fragment selectedFragment;
         if (var.equals("login")) {
             selectedFragment = LoginFragment.newInstance();
             content = "Masuk";
@@ -72,6 +72,14 @@ public class MainActivity extends AppCompatActivity{
         title.setText(content);
         action.setText(content);
     }
+
+
+    /*private boolean actionSwitcher (int position){
+        switch (position){
+            case :
+
+        }
+    }*/
 
 
     /*private void userData(){
